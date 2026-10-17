@@ -884,3 +884,29 @@ body.lr-lock { overflow: hidden; }
 
 /* let grid children shrink so the price table scrolls inside its own box on phones */
 #watu-phones > * { min-width: 0; }
+
+/* ============================================================
+   SPECIALTIES (Tech & Digital Solutions)
+   ============================================================ */
+#specialties { scroll-margin-top: calc(var(--nav-h) + 16px); }
+.sp-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 24px; }
+.sp-grid > .card { grid-column: span 2; }
+.sp-grid > .card:nth-child(4) { grid-column: 2 / 4; }
+.sp-grid > .card:nth-child(5) { grid-column: 4 / 6; }
+.sp-link { display: inline-block; margin-top: 16px; font-size: 12px; font-weight: 700; color: var(--gold-bright); letter-spacing: 1px; text-transform: uppercase; }
+.sp-link:hover { color: var(--gold-pale); }
+
+@media (max-width: 1024px) {
+  .sp-grid { grid-template-columns: repeat(2, 1fr); }
+  .sp-grid > .card, .sp-grid > .card:nth-child(4), .sp-grid > .card:nth-child(5) { grid-column: auto; }
+  .sp-grid > .card:last-child:nth-child(odd) { grid-column: 1 / -1; width: calc(50% - 12px); justify-self: center; }
+}
+@media (max-width: 640px) {
+  .sp-grid { grid-template-columns: 1fr; gap: 16px; }
+  .sp-grid > .card:last-child:nth-child(odd) { width: auto; }
+  .sp-grid .card { padding: 22px 20px; }
+  .sp-grid .card-icon { width: 46px; height: 46px; font-size: 22px; margin-bottom: 14px; }
+  .sp-grid .card-title { font-size: 19px; margin-bottom: 6px; }
+  .sp-grid .card-body { font-size: 13px; line-height: 1.65; }
+  .sp-link { margin-top: 12px; }
+}

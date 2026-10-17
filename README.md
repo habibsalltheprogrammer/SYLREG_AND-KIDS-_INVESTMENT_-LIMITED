@@ -148,7 +148,7 @@ Western Union ⭐ · MoneyGram · Ria · Afro International · NAFA · BnB · Ca
 
 ## Contact form, Formspree & Supabase
 
-- `contact.html` posts to Formspree (`https://formspree.io/f/xyeklbny`), which emails each message to the account owner. Formspree asks you to confirm the email address the first time a message arrives.
+- `contact.html` posts to Formspree (`https://formspree.io/f/xdeabkor`), which emails each message to the account owner. Formspree asks you to confirm the email address the first time a message arrives.
 - Database copy: every message is also saved in the `contact_messages` table of the Supabase project "sylreg & kids investment limited" (already created; URL and anon key are in `js/config.js`; schema in `supabase/schema.sql`). Visitors can only insert rows, never read them. Read messages in the Supabase dashboard → Table Editor.
 - The footer "Call Now" button scrolls to the contact section (`#contact-section`).
 

@@ -4,7 +4,7 @@
    ============================================================ */
 window.SYLREG_CONFIG = {
   // Formspree: emails every contact-form message to the company inbox.
-  FORMSPREE_URL: 'https://formspree.io/f/xyeklbny',
+  FORMSPREE_URL: 'https://formspree.io/f/xdeabkor',
 
   // Supabase: also saves every message in the database (table: contact_messages).
   // Project: "sylreg & kids investment limited". The anon key is public by design:

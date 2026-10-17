@@ -145,7 +145,11 @@
     const sel     = form.querySelector('#service');
     const msgBox  = form.querySelector('#message');
     const product = params.get('product');
-    if (params.get('service') === 'watu' && sel) {
+    const topic = params.get('topic');
+    if (params.get('service') === 'tech' && sel) {
+      sel.value = 'Tech & Digital Solutions';
+      if (msgBox && !msgBox.value) msgBox.value = topic ? 'I would like to ask about: ' + topic + '.' : 'I would like to discuss a web, app, systems, design or database project.';
+    } else if (params.get('service') === 'watu' && sel) {
       sel.value = 'Phone Loan (Watu)';
       if (msgBox && !msgBox.value) msgBox.value = 'I would like to ask about a phone loan through Watu.';
     } else if (product) {

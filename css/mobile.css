@@ -1,0 +1,42 @@
+/* ============================================================
+   SYLREG & KIDS INVESTMENT LIMITED — mobile.css
+   Loaded AFTER each page's own <style> block so these phone and
+   tablet layouts are not overridden by page-level grid rules.
+   ============================================================ */
+
+html, body { max-width: 100%; overflow-x: hidden; }
+
+/* ── Tablet and below ── */
+@media (max-width: 1024px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .services-grid,
+  .why-grid,
+  .values-grid,
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-grid,
+  .mv-grid { grid-template-columns: 1fr; }
+  div[style*="grid-template-columns:1fr 1fr;gap:64px"] { grid-template-columns: 1fr !important; gap: 36px !important; }
+}
+
+/* centre a lone last card in the 2-column layout */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .services-grid > .card:last-child:nth-child(odd) { grid-column: 1 / -1; width: calc(50% - 12px); justify-self: center; }
+}
+
+/* ── Phones ── */
+@media (max-width: 640px) {
+  .services-grid,
+  .why-grid,
+  .values-grid { grid-template-columns: 1fr; gap: 16px; }
+  .phones-grid { grid-template-columns: 1fr; }
+
+  /* compact, easy-to-scan service cards */
+  .services-grid .card { padding: 22px 20px; }
+  .services-grid .card-icon { width: 46px; height: 46px; font-size: 22px; margin-bottom: 14px; }
+  .services-grid .card-title { font-size: 19px; margin-bottom: 6px; }
+  .services-grid .card-body { font-size: 13px; line-height: 1.65; }
+  .services-grid .card a { margin-top: 12px !important; }
+}
+@media (max-width: 520px) {
+  .team-grid { grid-template-columns: 1fr; }
+}
